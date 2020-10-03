@@ -1,7 +1,7 @@
 node
 {
-    echo "Build Number is:  ${env.BUILD_NUMBER}"
-    properties([[$class: 'JiraProjectProperty'], buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5'))])
+  //  echo "Build Number is:  ${env.BUILD_NUMBER}"
+  //  properties([[$class: 'JiraProjectProperty'], buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5'))])
   stage('CheckoutCode')  
   {
       git branch: 'development', credentialsId: '782e5c03-1c33-43ba-996e-8e93dc59a1a3', url: 'https://github.com/mdasif992020/maven-web-application.git'
